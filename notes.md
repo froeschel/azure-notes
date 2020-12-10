@@ -5,6 +5,9 @@
 ### IAAS
 
 ### Web Apps
+* We use Azure App Service Web Apps. Code is deployed using Devops pipelines. Web apps can be created using the Portal, CLI, ARM Templates or Terraform.
+* Apps can be executed in different runtimes like .NET, Java, Node.js, PHP, Python or Ruby.
+* Wep Apps are running inside an App Service Plan. An App Service Plan can be scaled up (more computing power) or out (more instances).
 
 ### Functions
 

@@ -22,6 +22,7 @@
 ### Authentication and Authorization
 
 ### Secure Cloud Solutions
+* Azure Key Vault API
 
 ## Monitoring and Optimization
 

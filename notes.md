@@ -22,7 +22,8 @@
 ### Authentication and Authorization
 
 ### Secure Cloud Solutions
-* Azure Key Vault API
+* Azure Key Vault API: Azure Key Vault can manage secrets, keys and certificates.
+
 
 ## Monitoring and Optimization
 

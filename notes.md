@@ -44,5 +44,8 @@
 ### API Management
 
 ### Event processing
+* Event Grid
+* Notification Hubs
+* Azure Event Hub
 
 ### Messaging

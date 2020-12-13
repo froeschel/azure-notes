@@ -47,6 +47,6 @@
 * Event Grid
 * Notification Hubs
 * Azure Event Hub
-* Test comment--
+
 
 ### Messaging

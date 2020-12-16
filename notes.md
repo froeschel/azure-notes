@@ -15,7 +15,7 @@
 
 ### Cosmos
 * Azure Cosmos DB is a fully managed NoSQL database for modern app development. Single-digit millisecond response times, and automatic and instant scalability, guarantee speed at any scale.
-* Pricing can be a bit complicated. Price is calculated per Request Unit (RU). One can have specific pricing per container or share RUs for the whole database.
+* Pricing can be a bit complicated. Price is calculated per Request Unit (RU). RU is a 'performance currency abstracting the system resources such as CPU, IOPS, and memory'. So database operations can have a variable amount of RUs, depending on how much system resources it takes. You pay for the throughput in RU that you provision. One can have specific pricing per container or share RUs for the whole database.
 * Cosmos DB provides five different database APIs: SQL, Cassandra, Mongo, Gramlin and Table API.
 
 ### Blob Storage

@@ -43,6 +43,7 @@
 ### Logic App
 
 ### API Management
+* An API Management instance enables client applications to use OAuth 2.0 authentication when using an AAD tenant.
 
 ### Event processing
 * Event Grid

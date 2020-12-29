@@ -10,6 +10,7 @@
 * Wep Apps are running inside an App Service Plan. An App Service Plan can be scaled up (more computing power) or out (more instances).
 
 ### Functions
+* Functions can be run by timer trigger. These are set by using NCRONTAB expressions. They have the format {second} {minute} {hour} {day} {month} {day-of-week}. So if you want to run the function every 3 hours it should look like this: 0 0 */3 * * *
 
 ## Storage
 

@@ -3,11 +3,13 @@
 ## Compute Solution
 
 ### IAAS
+* When one wants to publish an image to the ACR it needs to be tagged the following way [reg-name].azurecr.io/[name-of-image].
 
 ### Web Apps
 * We use Azure App Service Web Apps. Code is deployed using Devops pipelines. Web apps can be created using the Portal, CLI, ARM Templates or Terraform.
 * Apps can be executed in different runtimes like .NET, Java, Node.js, PHP, Python or Ruby.
 * Wep Apps are running inside an App Service Plan. An App Service Plan can be scaled up (more computing power) or out (more instances).
+*
 
 ### Functions
 * Functions can be run by timer trigger. These are set by using NCRONTAB expressions. They have the format {second} {minute} {hour} {day} {month} {day-of-week}. So if you want to run the function every 3 hours it should look like this: 0 0 */3 * * *
@@ -43,6 +45,7 @@
 ## Third Party Services
 
 ### Logic App
+* Logic Apps can have following control actions [Scope, For Each, Condition, Switch].
 
 ### API Management
 * An API Management instance enables client applications to use OAuth 2.0 authentication when using an AAD tenant.

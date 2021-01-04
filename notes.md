@@ -57,3 +57,4 @@
 
 
 ### Messaging
+*  Azure Queue Storage queues, provide cloud messaging between components. This can be helpful when designing systems that have components which need to scale independently. To get messages from queue you can use the following code: 

@@ -45,7 +45,7 @@
 ## Third Party Services
 
 ### Logic App
-* Logic Apps can have following control actions [Scope, For Each, Condition, Switch].
+* Logic Apps can have following control actions [Scope, For Each, Condition, Switch, Until].
 
 ### API Management
 * An API Management instance enables client applications to use OAuth 2.0 authentication when using an AAD tenant.

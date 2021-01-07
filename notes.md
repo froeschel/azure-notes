@@ -9,7 +9,7 @@
 * We use Azure App Service Web Apps. Code is deployed using Devops pipelines. Web apps can be created using the Portal, CLI, ARM Templates or Terraform.
 * Apps can be executed in different runtimes like .NET, Java, Node.js, PHP, Python or Ruby.
 * Wep Apps are running inside an App Service Plan. An App Service Plan can be scaled up (more computing power) or out (more instances).
-*
+* App Service Plans can scale out. One could use manual scale or custom autoscale. Maual scale: Setting a predined number of instances. Autoscale: Scale based on a metric or scale to a specific instance count at a specific time. Manual scale: Simply set the instance count. 
 
 ### Functions
 * Functions can be run by timer trigger. These are set by using NCRONTAB expressions. They have the format {second} {minute} {hour} {day} {month} {day-of-week}. So if you want to run the function every 3 hours it should look like this: 0 0 */3 * * *

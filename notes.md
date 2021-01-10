@@ -50,6 +50,13 @@
 
 ### API Management
 * An API Management instance enables client applications to use OAuth 2.0 authentication when using an AAD tenant.
+* Use the `rate-limit-by-key` policy to protect the API againts client usage spikes. When a client triggers the policy it gets a 429. Policy definition:
+```xml
+<rate-limit-by-key calls="number"
+                   renewal-period="seconds"
+                   increment-condition="condition"
+                   counter-key="key value" />
+```
 
 ### Event processing
 * Event Grid

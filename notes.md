@@ -31,6 +31,8 @@
 
 ### Secure Cloud Solutions
 * Azure Key Vault API: Azure Key Vault can manage secrets, keys and certificates. When using C# one can access keys by using the `KeyClient` class.
+* Key Vault is secured by Azure AD. It is possible to assign permissions to a Key Vault. Permission are managed in 'Access policies'.
+* In Functions you can reference the Key Vault by using an environment variable in format `@Microsoft.KeyVault(SecretUri=copied identifier for the secret)`. 
 
 
 ## Monitoring and Optimization

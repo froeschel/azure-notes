@@ -24,6 +24,10 @@
 * When creating a Cosmos database it can be set to 5 different consistency levels [Strong, Bounded staleness, Session, Consistent prefix, Eventual]. [Strong] A client will never read a uncomitted or partial write.
 
 ### Blob Storage
+* Blob storage offers 3 different access tiers: Hot [frequently accessed], cool [infrequently accessed] and archived [for long term backup].
+* Files can be moved by CLI, AzCopy or by using client library.
+* A file in blob storage has metadata and properties. Metadata is user generated (docType, docClas) and properties are system generated (LastModified, BlobType).
+* One can set metadata on a blob with following command `PUT https://myaccount.blob.core.windows.net/mycontainer/myblob?comp=metadata`.
 
 ## Security
 

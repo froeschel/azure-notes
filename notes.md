@@ -28,8 +28,13 @@
 * Files can be moved by CLI, AzCopy or by using client library.
 * A file in blob storage has metadata and properties. Metadata is user generated (docType, docClas) and properties are system generated (LastModified, BlobType).
 * One can set metadata on a blob with following command `PUT https://myaccount.blob.core.windows.net/mycontainer/myblob?comp=metadata`.
+* Blob storage is accesible by using Azure Storage REST API, Azure PowerShell, Azure CLI or client libraries in .NET, Java, Node.js, Python, Go, PHP or Ruby.
+* Rules can be set so that blobs automatically can move to another access tier based ona property e.g. LastModified.
+
 
 ## Security
+* OpenID Connect for authentication and OAuth2 for authentication.
+* Shared Access Signatures (SAS) grant limited access to resources
 
 ### Authentication and Authorization
 

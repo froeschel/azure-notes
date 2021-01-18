@@ -33,10 +33,12 @@
 
 
 ## Security
+
+### Authentication and Authorization
 * OpenID Connect for authentication and OAuth2 for authentication.
 * Shared Access Signatures (SAS) grant limited access to resources
 
-### Authentication and Authorization
+
 
 ### Secure Cloud Solutions
 * Azure Key Vault API: Azure Key Vault can manage secrets, keys and certificates. When using C# one can access keys by using the `KeyClient` class.
@@ -76,4 +78,5 @@
 
 
 ### Messaging
+* Azure Service Bus: Used to send messages between system components. These messages are consumed elsewhere in the system.
 *  Azure Queue Storage queues, provide cloud messaging between components. This can be helpful when designing systems that have components which need to scale independently. To get messages from queue you can use the following code: 

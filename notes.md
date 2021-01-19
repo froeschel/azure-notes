@@ -3,6 +3,9 @@
 ## Compute Solution
 
 ### IAAS
+* When creating a resource one can download a ARM template [template.json + parametrs.json].
+* In the portal a custom deployment can be created by uploading the template and parameters file.
+* Deploy ARM with CLI: `az deployment group create --resource-group Responza-KB-Test --template-file template.json --parameters parameters.json`
 * When one wants to publish an image to the ACR it needs to be tagged the following way [reg-name].azurecr.io/[name-of-image].
 
 ### Web Apps
@@ -31,14 +34,12 @@
 * Blob storage is accesible by using Azure Storage REST API, Azure PowerShell, Azure CLI or client libraries in .NET, Java, Node.js, Python, Go, PHP or Ruby.
 * Rules can be set so that blobs automatically can move to another access tier based ona property e.g. LastModified.
 
-
 ## Security
 
 ### Authentication and Authorization
 * OpenID Connect for authentication and OAuth2 for authentication.
-* Shared Access Signatures (SAS) grant limited access to resources
-
-
+* Shared Access Signatures (SAS) grant limited access to resources. Three types [User, Service and Account].
+* SAS keys can be genereted in PowerShell, CLI or .NET.
 
 ### Secure Cloud Solutions
 * Azure Key Vault API: Azure Key Vault can manage secrets, keys and certificates. When using C# one can access keys by using the `KeyClient` class.

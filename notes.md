@@ -54,6 +54,7 @@
 ## Monitoring and Optimization
 
 ### Caching
+* Cache expiration policies for FrontDoor, CDNs, or Redis caches store.
 
 ### Logging
 * Enable diagnostics logging for App Servive: On the menu 'App Service logs' switch on 'Application Logging' and 'Web server logging'. Select a quota and a retention period.
@@ -64,7 +65,10 @@
 ## Third Party Services
 
 ### Logic App
-* Logic Apps can have following control actions [Scope, For Each, Condition, Switch, Until].
+* Logic Apps are cloud services that automate a business process.
+* A trigger activates when a condition is met. An action executes a task. Control actions are special actions that provides these control constructs:
+* Logic Apps can have following control actions [For Each, Condition, Switch, Until].
+* Logic Apps are creted in the graphical designer.
 
 ### API Management
 * An API Management instance enables client applications to use OAuth 2.0 authentication when using an AAD tenant.

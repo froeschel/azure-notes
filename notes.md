@@ -3,10 +3,14 @@
 ## Compute Solution
 
 ### IAAS
+* Update-AzVM: Updating the state of a VM. E.g. with a an IdentityId [Update-AzVM - IdentityId]. This sets the number of identities.
 * When creating a resource one can download a ARM template [template.json + parametrs.json].
 * In the portal a custom deployment can be created by uploading the template and parameters file.
 * Deploy ARM with CLI: `az deployment group create --resource-group Responza-KB-Test --template-file template.json --parameters parameters.json`
+* `az group export` captures the complete resource group as a template.
 * When one wants to publish an image to the ACR it needs to be tagged the following way [reg-name].azurecr.io/[name-of-image].
+* Create a ACR: `az acr create`.
+* Generate an image: `az acr build.`
 
 ### Web Apps
 * We use Azure App Service Web Apps. Code is deployed using Devops pipelines. Web apps can be created using the Portal, CLI, ARM Templates or Terraform.
@@ -33,6 +37,7 @@
 * One can set metadata on a blob with following command `PUT https://myaccount.blob.core.windows.net/mycontainer/myblob?comp=metadata`.
 * Blob storage is accesible by using Azure Storage REST API, Azure PowerShell, Azure CLI or client libraries in .NET, Java, Node.js, Python, Go, PHP or Ruby.
 * Rules can be set so that blobs automatically can move to another access tier based ona property e.g. LastModified.
+* Blob storage account URL format: `https://{accountName}blob.core.windows.net/{container}/{blobName}`.
 
 ## Security
 
@@ -69,6 +74,8 @@
 * A trigger activates when a condition is met. An action executes a task. Control actions are special actions that provides these control constructs:
 * Logic Apps can have following control actions [For Each, Condition, Switch, Until].
 * Logic Apps are creted in the graphical designer.
+* A custom connector can be created by importing an API sepcification.
+
 
 ### API Management
 * An API Management instance enables client applications to use OAuth 2.0 authentication when using an AAD tenant.
@@ -81,9 +88,10 @@
 ```
 
 ### Event processing
-* Event Grid
+* Event Grid: For reacting to status changes in event driven architecture.
+* With Event Grid you can create a a subscription for an event so that you get notified when changes happen.
+* Azure Event Hub: For streaming and telemetry of distributed data. E.g. IoT devices.
 * Notification Hubs
-* Azure Event Hub
 
 
 ### Messaging

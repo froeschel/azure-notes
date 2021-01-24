@@ -68,6 +68,8 @@
 ### Caching
 * Cache expiration policies for FrontDoor, CDNs, or Redis caches store.
 * Get information from Redis: var info = `database.Execute("INFO");`.
+* Azure CDN caching rules: Bypass cache [do not cache], Override [override origin cache], Set if missing [use own if origin missing].
+* Query string caching: Ignore query strings [deault, cache in POP node], Bypass caching for query strings [do not cache query strings at all], Cache every unique URL [every url set as an unique asset].
 
 ### Logging
 * Enable diagnostics logging for App Servive: On the menu 'App Service logs' switch on 'Application Logging' and 'Web server logging'. Select a quota and a retention period.

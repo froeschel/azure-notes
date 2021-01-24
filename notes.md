@@ -32,6 +32,9 @@
 * Cosmos DB provides five different database APIs: SQL, Cassandra, Mongo, Gramlin and Table API.
 * A cosmos container should have a partition key. With a partition key,documents will be grouped into logical partitions. It is important to set a partition key so that all documents are evenly distributed. To find the right key canbe tricky when starting a new project.
 * When creating a Cosmos database it can be set to 5 different consistency levels [Strong, Bounded staleness, Session, Consistent prefix, Eventual]. [Strong] A client will never read a uncomitted or partial write.
+* Stored precedures:
+* Triggers:
+* Changefeed notification:
 
 ### Blob Storage
 * Blob storage offers 3 different access tiers: Hot [frequently accessed], cool [infrequently accessed] and archived [for long term backup].
@@ -41,6 +44,7 @@
 * Blob storage is accesible by using Azure Storage REST API, Azure PowerShell, Azure CLI or client libraries in .NET, Java, Node.js, Python, Go, PHP or Ruby.
 * Rules can be set so that blobs automatically can move to another access tier based ona property e.g. LastModified.
 * Blob storage account URL format: `https://{accountName}blob.core.windows.net/{container}/{blobName}`.
+* Blob leasing = prevent override or deletion.
 
 ## Security
 
@@ -63,6 +67,7 @@
 
 ### Caching
 * Cache expiration policies for FrontDoor, CDNs, or Redis caches store.
+* Get information from Redis: var info = `database.Execute("INFO");`.
 
 ### Logging
 * Enable diagnostics logging for App Servive: On the menu 'App Service logs' switch on 'Application Logging' and 'Web server logging'. Select a quota and a retention period.
@@ -93,6 +98,7 @@
 ### Event processing
 * Event Grid: For reacting to status changes in event driven architecture.
 * With Event Grid you can create a a subscription for an event so that you get notified when changes happen.
+* Register event grid as resource provider: `az provider register --namespace Microsoft.EventGrid`. 
 * Azure Event Hub: For streaming and telemetry of distributed data. E.g. IoT devices.
 * Notification Hubs
 

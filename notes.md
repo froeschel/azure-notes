@@ -4,6 +4,9 @@
 
 ### IAAS
 * Update-AzVM: Updating the state of a VM. E.g. with a an IdentityId [Update-AzVM - IdentityId]. This sets the number of identities.
+* `az vm identity assign` to assign an identity that has been created with `az identity create`
+* Configure remote access on Windows: Use the portal to get the RDP connection.
+* Configure remote access on Linux: Generate a keypair: Public key to vm, private key on client.
 * When creating a resource one can download a ARM template [template.json + parametrs.json].
 * In the portal a custom deployment can be created by uploading the template and parameters file.
 * Deploy ARM with CLI: `az deployment group create --resource-group Responza-KB-Test --template-file template.json --parameters parameters.json`
@@ -96,4 +99,5 @@
 
 ### Messaging
 * Azure Service Bus: Used to send messages between system components. These messages are consumed elsewhere in the system.
+* Use `client.SendAsync(new Message(Encoding.UTF8.GetBytes(message)))` to send messages to the Service Bus.
 *  Azure Queue Storage queues, provide cloud messaging between components. This can be helpful when designing systems that have components which need to scale independently. To get messages from queue you can use the following code: 

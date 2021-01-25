@@ -15,6 +15,7 @@
 * Create a ACR: `az acr create`.
 * Generate an image: `az acr build.`
 
+
 ### Web Apps
 * We use Azure App Service Web Apps. Code is deployed using Devops pipelines. Web apps can be created using the Portal, CLI, ARM Templates or Terraform.
 * Apps can be executed in different runtimes like .NET, Java, Node.js, PHP, Python or Ruby.
@@ -102,7 +103,7 @@
 * With Event Grid you can create a a subscription for an event so that you get notified when changes happen.
 * Register event grid as resource provider: `az provider register --namespace Microsoft.EventGrid`. 
 * Azure Event Hub: For streaming and telemetry of distributed data. E.g. IoT devices.
-* Notification Hubs
+* Notification Hubs: Two resource levels --> hubs and namespaces. Hub is a push resource for one app. A namespace is a collection of hubs in one region.
 
 
 ### Messaging

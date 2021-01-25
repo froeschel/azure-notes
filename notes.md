@@ -103,6 +103,8 @@
 * With Event Grid you can create a a subscription for an event so that you get notified when changes happen.
 * Register event grid as resource provider: `az provider register --namespace Microsoft.EventGrid`. 
 * Azure Event Hub: For streaming and telemetry of distributed data. E.g. IoT devices.
+* Event Hub send events: Use the `EventHubClient` class. It has the method `SendAsync(EventData event)` where EventData takes a byte array. 
+* Event Hub process events: Use the  `IEventProcessor` interface. It has a method called  `ProcessEventAsync`. 
 * Notification Hubs: Two resource levels --> hubs and namespaces. Hub is a push resource for one app. A namespace is a collection of hubs in one region.
 
 

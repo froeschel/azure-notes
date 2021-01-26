@@ -32,9 +32,10 @@
 * Pricing can be a bit complicated. Price is calculated per Request Unit (RU). RU is a 'performance currency abstracting the system resources such as CPU, IOPS, and memory'. So database operations can have a variable amount of RUs, depending on how much system resources it takes. You pay for the throughput in RU that you provision. One can have specific pricing per container or share RUs for the whole database.
 * Cosmos DB provides five different database APIs: SQL, Cassandra, Mongo, Gramlin and Table API.
 * A cosmos container should have a partition key. With a partition key,documents will be grouped into logical partitions. It is important to set a partition key so that all documents are evenly distributed. To find the right key canbe tricky when starting a new project.
-* When creating a Cosmos database it can be set to 5 different consistency levels [Strong, Bounded staleness, Session, Consistent prefix, Eventual]. [Strong] A client will never read a uncomitted or partial write.
-* Stored precedures:
-* Triggers:
+* When creating a Cosmos database it can be set to 5 different consistency levels [Strong, Bounded staleness, Session, Consistent prefix, Eventual]. [Strong] A client will never read a uncomitted or partial write, [Bounded staleness] A read might lack behind a write, [Consistent Prefix] reads never see out-of-order writes, [Eventual] a client may read the values that are older than the ones it had read before.
+* Stored precedures: Stored procedures are written using JavaScript, they can create, update, read, query, and delete items inside an Azure Cosmos container.
+* Triggers: Pre-trigger are executed before modifying an item. Post-trigger after modifying an item.
+* Trigger and stored procedures must be registered and called through the SDK.
 * Changefeed notification:
 
 ### Blob Storage
@@ -68,9 +69,14 @@
 
 ### Caching
 * Cache expiration policies for FrontDoor, CDNs, or Redis caches store.
-* Get information from Redis: var info = `database.Execute("INFO");`.
+* One CDN profile has one or more endpoints.
+* When creating a CDN endpoint you add the endpoint url and the origin hostname url. 
+* CDN endpoints can have custom domain.
+* When origin content changes, purge CDN.
 * Azure CDN caching rules: Bypass cache [do not cache], Override [override origin cache], Set if missing [use own if origin missing].
 * Query string caching: Ignore query strings [deault, cache in POP node], Bypass caching for query strings [do not cache query strings at all], Cache every unique URL [every url set as an unique asset].
+* Get information from Redis: var info = `database.Execute("INFO");`.
+
 
 ### Logging
 * Enable diagnostics logging for App Servive: On the menu 'App Service logs' switch on 'Application Logging' and 'Web server logging'. Select a quota and a retention period.

@@ -24,6 +24,8 @@
 
 ### Functions
 * Functions can be run by timer trigger. These are set by using NCRONTAB expressions. They have the format {second} {minute} {hour} {day} {month} {day-of-week}. So if you want to run the function every 3 hours it should look like this: 0 0 */3 * * *
+* Triggers are what causes a function to run e.g. an event in the system. A function can only have one trigger.
+* Bindings: Input --> data that comes in to the functuin. Output --> data that is send. Function can have multiple input and output bindings.
 
 ## Storage
 
@@ -36,6 +38,7 @@
 * Stored precedures: Stored procedures are written using JavaScript, they can create, update, read, query, and delete items inside an Azure Cosmos container.
 * Triggers: Pre-trigger are executed before modifying an item. Post-trigger after modifying an item.
 * Trigger and stored procedures must be registered and called through the SDK.
+* Triggers, stored procedures and UDF only works with SQL API.
 * Changefeed notification:
 
 ### Blob Storage
@@ -47,6 +50,8 @@
 * Rules can be set so that blobs automatically can move to another access tier based ona property e.g. LastModified.
 * Blob storage account URL format: `https://{accountName}blob.core.windows.net/{container}/{blobName}`.
 * Blob leasing = prevent override or deletion.
+* Create a read onlu snapshot: `https://myaccount.blob.core.windows.net/mycontainer/myblob?comp=snapshot`. 
+* Get a snapshot of a blob using query string: `https://myaccount.blob.core.windows.net/mycontainer/myblob?snapshot=<DateTime>`.
 
 ## Security
 
@@ -96,12 +101,22 @@
 
 ### API Management
 * An API Management instance enables client applications to use OAuth 2.0 authentication when using an AAD tenant.
+* API verision: A new version needs to be published and can introduce breaking changes. Address a new version via version header.
+* API revision: A revision does not need to be published. A revision can be accessed by using a query string on the same endpoint. 
 * Use the `rate-limit-by-key` policy to protect the API againts client usage spikes. When a client triggers the policy it gets a 429. Policy definition:
 ```xml
 <rate-limit-by-key calls="number"
                    renewal-period="seconds"
                    increment-condition="condition"
                    counter-key="key value" />
+```
+* Use `quota-by-key` to define max calls and or bandwith that can be used in a specific period.
+```xml
+<quota-by-key calls="number"
+              bandwidth="kilobytes"
+              renewal-period="seconds"
+              increment-condition="condition"
+              counter-key="key value" />
 ```
 
 ### Event processing

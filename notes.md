@@ -13,7 +13,7 @@
 * `az group export` captures the complete resource group as a template.
 * When one wants to publish an image to the ACR it needs to be tagged the following way [reg-name].azurecr.io/[name-of-image].
 * Create a ACR: `az acr create`.
-* Generate an image: `az acr build.`
+* Generate an image: `az acr build.` When image is build it is pushed to a registry.
 
 
 ### Web Apps
@@ -81,6 +81,7 @@
 * Azure CDN caching rules: Bypass cache [do not cache], Override [override origin cache], Set if missing [use own if origin missing].
 * Query string caching: Ignore query strings [deault, cache in POP node], Bypass caching for query strings [do not cache query strings at all], Cache every unique URL [every url set as an unique asset].
 * Get information from Redis: var info = `database.Execute("INFO");`.
+* Some Redis commands: `SET` sets a value in a key, `SETEX` sets value and a key and a expiration time, `EXPIRE` sets a key to expire, `EXISTS` check if a key exists in Redis.  
 
 
 ### Logging
@@ -126,10 +127,14 @@
 * Azure Event Hub: For streaming and telemetry of distributed data. E.g. IoT devices.
 * Event Hub send events: Use the `EventHubClient` class. It has the method `SendAsync(EventData event)` where EventData takes a byte array. 
 * Event Hub process events: Use the  `IEventProcessor` interface. It has a method called  `ProcessEventAsync`. 
+* Notification hub: Push engine to send notifications to different platforms (iOS, Android, Windows).
 * Notification Hubs: Two resource levels --> hubs and namespaces. Hub is a push resource for one app. A namespace is a collection of hubs in one region.
 
 
 ### Messaging
 * Azure Service Bus: Used to send messages between system components. These messages are consumed elsewhere in the system.
+* A namespace is a container for all messaging components. Multiple queues and topics can be in a single namespace.
+* Queues consists of orederd timestamped messages.
+* Topics can have multiple subscribers not just point-to-point like queues.
 * Use `client.SendAsync(new Message(Encoding.UTF8.GetBytes(message)))` to send messages to the Service Bus.
 *  Azure Queue Storage queues, provide cloud messaging between components. This can be helpful when designing systems that have components which need to scale independently. To get messages from queue you can use the following code: 

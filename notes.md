@@ -3,6 +3,7 @@
 ## Compute Solution
 
 ### IAAS
+* VMs of generation 1 support disk encryption. Generation 2 has no support for disk encryption. Fixed disk is required. 
 * Update-AzVM: Updating the state of a VM. E.g. with a an IdentityId [Update-AzVM - IdentityId]. This sets the number of identities.
 * `az vm identity assign` to assign an identity that has been created with `az identity create`
 * Configure remote access on Windows: Use the portal to get the RDP connection.
@@ -134,7 +135,7 @@
 ### Messaging
 * Azure Service Bus: Used to send messages between system components. These messages are consumed elsewhere in the system.
 * A namespace is a container for all messaging components. Multiple queues and topics can be in a single namespace.
-* Queues consists of orederd timestamped messages.
-* Topics can have multiple subscribers not just point-to-point like queues.
+* Queues consists of orederd timestamped messages. Integrate with queues using the `QueueClient`.
+* Topics can have multiple subscribers not just point-to-point like queues. For integrating with topics use `TopicClient`.
 * Use `client.SendAsync(new Message(Encoding.UTF8.GetBytes(message)))` to send messages to the Service Bus.
 *  Azure Queue Storage queues, provide cloud messaging between components. This can be helpful when designing systems that have components which need to scale independently. To get messages from queue you can use the following code: 

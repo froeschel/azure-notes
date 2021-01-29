@@ -69,6 +69,10 @@
 * Azure Key Vault API: Azure Key Vault can manage secrets, keys and certificates. When using C# one can access keys by using the `KeyClient` class.
 * Key Vault is secured by Azure AD. It is possible to assign permissions to a Key Vault. Permission are managed in 'Access policies'.
 * In Functions you can reference the Key Vault by using an environment variable in format `@Microsoft.KeyVault(SecretUri=copied identifier for the secret)`. 
+* Managed identities: Used for giving access to to resources (e.g. KeyVault) without having to handle credentials.
+* Managed identities are free to use.
+* System assigned: Enable a managed identity directly on a service instance.
+* User assigned: Identity created by the user and assined to different resources. 
 
 
 ## Monitoring and Optimization

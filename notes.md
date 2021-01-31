@@ -24,6 +24,7 @@
 * App Service Plans can scale out. One could use manual scale or custom autoscale. Maual scale: Setting a predined number of instances. Autoscale: Scale based on a metric or scale to a specific instance count at a specific time. Manual scale: Simply set the instance count. 
 
 ### Functions
+* Functions supported languages: C#, JavaScript, F#, Java, PowerShell, Python, TypeScript.
 * Functions can be run by timer trigger. These are set by using NCRONTAB expressions. They have the format {second} {minute} {hour} {day} {month} {day-of-week}. So if you want to run the function every 3 hours it should look like this: 0 0 */3 * * *
 * Triggers are what causes a function to run e.g. an event in the system. A function can only have one trigger.
 * Bindings: Input --> data that comes in to the functuin. Output --> data that is send. Function can have multiple input and output bindings.
@@ -94,6 +95,7 @@
   Logs can be downloaded from this url: `https://<app-name>.scm.azurewebsites.net/api/dump`
 * View Log Stream: The log stream can be viewed on the menu item 'Log stream'.
 * Logging with Application Insights: When configuring Application Insights in a ASP.NET core app the ILogger sends warnings and above to AI sink. Read more [here](https://docs.microsoft.com/en-us/azure/azure-monitor/app/ilogger).
+* Use `SqlAzureExecutionStrategy` to handle transient faults. Can by used manually `executionStrategy.Execute(() =>` or be set in the DBConfiguration class.
 
 ## Third Party Services
 
@@ -130,6 +132,7 @@
 * With Event Grid you can create a a subscription for an event so that you get notified when changes happen.
 * Register event grid as resource provider: `az provider register --namespace Microsoft.EventGrid`. 
 * Azure Event Hub: For streaming and telemetry of distributed data. E.g. IoT devices.
+* Event Hub connection string format: `Endpoint=sb://<FQDN>/;SharedAccessKeyName=<KeyName>;SharedAccessKey=<KeyValue>`
 * Event Hub send events: Use the `EventHubClient` class. It has the method `SendAsync(EventData event)` where EventData takes a byte array. 
 * Event Hub process events: Use the  `IEventProcessor` interface. It has a method called  `ProcessEventAsync`. 
 * Notification hub: Push engine to send notifications to different platforms (iOS, Android, Windows).

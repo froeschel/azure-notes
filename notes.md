@@ -31,6 +31,10 @@
 
 ## Storage
 
+* Data can be categorized into three different types: structured, semi structered and unstructured.
+* Structured use SQL, semi structured use Cosmos, unstructured use Blob storage.
+* Azure storage has four data services: `Blobs, Files, Queues, Tables`.
+
 ### Cosmos
 * Azure Cosmos DB is a fully managed NoSQL database for modern app development. Single-digit millisecond response times, and automatic and instant scalability, guarantee speed at any scale.
 * Pricing can be a bit complicated. Price is calculated per Request Unit (RU). RU is a 'performance currency abstracting the system resources such as CPU, IOPS, and memory'. So database operations can have a variable amount of RUs, depending on how much system resources it takes. You pay for the throughput in RU that you provision. One can have specific pricing per container or share RUs for the whole database.

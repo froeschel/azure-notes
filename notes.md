@@ -3,6 +3,16 @@
 ## Compute Solution
 
 ### IAAS
+* VM price can be reduced if you shut it down. You still need to pay for storage.
+* Spot instance: Machine at a reduced price for a limited amoount of time.
+* Disk is stored as VHD (virtual hard disk). Three option: `Premium SSD`, `Standard SSD`, `Standard HDD`.
+* Disk is encrypted at rest with platform encryption key.
+* Data disks can be atached and detached to a VM.
+* Vnet for VM needs to be in the same region. 
+* When using RDP to connect remember to open ports in NSG.
+* Use gen1 VMs unless you have specific requirements.
+* When creating a VM it needs a name, location, group, vnet, subnet, nsg.
+* 1 VM is made of `Machine`,`Network Interface`, `Data Disk`, `Public IP`, `NSG`, `VNET`, `Data Disk`.
 * VMs of generation 1 support disk encryption. Generation 2 has no support for disk encryption. Fixed disk is required. 
 * Update-AzVM: Updating the state of a VM. E.g. with a an IdentityId [Update-AzVM - IdentityId]. This sets the number of identities.
 * `az vm identity assign` to assign an identity that has been created with `az identity create`
@@ -13,8 +23,12 @@
 * Deploy ARM with CLI: `az deployment group create --resource-group Responza-KB-Test --template-file template.json --parameters parameters.json`
 * `az group export` captures the complete resource group as a template.
 * When one wants to publish an image to the ACR it needs to be tagged the following way [reg-name].azurecr.io/[name-of-image].
+* ACR a private repository of images.
 * Create a ACR: `az acr create`.
 * Generate an image: `az acr build.` When image is build it is pushed to a registry.
+* Container instances are simpler than kubernetes, but do not offerthe same flexibility.
+*
+
 
 
 ### Web Apps

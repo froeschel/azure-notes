@@ -48,6 +48,11 @@
 * Data can be categorized into three different types: structured, semi structered and unstructured.
 * Structured use SQL, semi structured use Cosmos, unstructured use Blob storage.
 * Azure storage has four data services: `Blobs, Files, Queues, Tables`.
+* Unmanged storage accounts must have a unique name across Azure due to REST endpoint.
+* Storage aacount standard SKU is ok. For new accounts use GPv2 [GPv1 only for legacy].
+* `LRS`: 3 copies in one AZ. `ZRS`: 3 copies one per AZ. `RA-GRS`: 6 copies --> 3 per region + additional Read access for distribution. `GZRS`: 6 copies --> two regions --> primary and secondary read access.
+* Not all replication options are available in every region.
+
 
 ### Cosmos
 * Azure Cosmos DB is a fully managed NoSQL database for modern app development. Single-digit millisecond response times, and automatic and instant scalability, guarantee speed at any scale.

@@ -38,10 +38,14 @@
 * App Service Plans can scale out. One could use manual scale or custom autoscale. Maual scale: Setting a predined number of instances. Autoscale: Scale based on a metric or scale to a specific instance count at a specific time. Manual scale: Simply set the instance count. 
 
 ### Functions
+* During the first call to a function in a consumption plan it can take som time to get a reply. To avoid that use premium plan.
 * Functions supported languages: C#, JavaScript, F#, Java, PowerShell, Python, TypeScript.
 * Functions can be run by timer trigger. These are set by using NCRONTAB expressions. They have the format {second} {minute} {hour} {day} {month} {day-of-week}. So if you want to run the function every 3 hours it should look like this: 0 0 */3 * * *
 * Triggers are what causes a function to run e.g. an event in the system. A function can only have one trigger.
 * Bindings: Input --> data that comes in to the functuin. Output --> data that is send. Function can have multiple input and output bindings.
+* Durable function for long running operations that need to maintain state. 
+* To work with duarble function the extension in the portal needs to be activated.
+* It is possible to check status of a durable function using `statusQueryGetUri`.
 
 ## Storage
 
@@ -52,6 +56,7 @@
 * Storage aacount standard SKU is ok. For new accounts use GPv2 [GPv1 only for legacy].
 * `LRS`: 3 copies in one AZ. `ZRS`: 3 copies one per AZ. `RA-GRS`: 6 copies --> 3 per region + additional Read access for distribution. `GZRS`: 6 copies --> two regions --> primary and secondary read access.
 * Not all replication options are available in every region.
+* `Soft delete` gives the possibility to restore deleted files within a specified retention period.
 
 
 ### Cosmos

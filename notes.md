@@ -174,3 +174,4 @@
 * Topics can have multiple subscribers not just point-to-point like queues. For integrating with topics use `TopicClient`.
 * Use `client.SendAsync(new Message(Encoding.UTF8.GetBytes(message)))` to send messages to the Service Bus.
 *  Azure Queue Storage queues, provide cloud messaging between components. This can be helpful when designing systems that have components which need to scale independently. To get messages from queue you can use the following code: 
+* The max size for a message in Azure Queue Storage is 64 KB.

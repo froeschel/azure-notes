@@ -168,10 +168,16 @@
 
 
 ### Messaging
-* Azure Service Bus: Used to send messages between system components. These messages are consumed elsewhere in the system.
-* A namespace is a container for all messaging components. Multiple queues and topics can be in a single namespace.
 * Queues consists of orederd timestamped messages. Integrate with queues using the `QueueClient`.
-* Topics can have multiple subscribers not just point-to-point like queues. For integrating with topics use `TopicClient`.
 * Use `client.SendAsync(new Message(Encoding.UTF8.GetBytes(message)))` to send messages to the Service Bus.
 *  Azure Queue Storage queues, provide cloud messaging between components. This can be helpful when designing systems that have components which need to scale independently. To get messages from queue you can use the following code: 
 * The max size for a message in Azure Queue Storage is 64 KB.
+* Azure Service Bus: Used to send messages between system components. These messages are consumed elsewhere in the system.
+* Service Bus has more features than storage queue.
+* Service Bus lives in a namespace.
+* Max message size in service bus 256 KB
+* Basic Plan has only queues. Standard and above has queues and topics.
+* Service Bus has a SLA of 99,9%.
+* A namespace is a container for all messaging components. Multiple queues and topics can be in a single namespace.
+* Topics can have multiple subscribers not just point-to-point like queues. For integrating with topics use `TopicClient`.
+

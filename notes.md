@@ -159,10 +159,15 @@
 * Event Grid: For reacting to status changes in event driven architecture.
 * With Event Grid you can create a a subscription for an event so that you get notified when changes happen.
 * Register event grid as resource provider: `az provider register --namespace Microsoft.EventGrid`. 
-* Azure Event Hub: For streaming and telemetry of distributed data. E.g. IoT devices.
+* Azure Event Hub: For streaming and telemetry of distributed data. 
+* There are three pricing tiers for Azure Event Hubs: Basic, Standard, and Dedicated. The tiers differ in terms of supported connections, the number of available Consumer groups, and throughput [from docs site].
+* Namespaces need a unique name. The have the url pattern `namespace.servicebus.windows.net`.
+* EventHub partition count needs to be equal to number of consumers.
 * Event Hub connection string format: `Endpoint=sb://<FQDN>/;SharedAccessKeyName=<KeyName>;SharedAccessKey=<KeyValue>`
 * Event Hub send events: Use the `EventHubClient` class. It has the method `SendAsync(EventData event)` where EventData takes a byte array. 
 * Event Hub process events: Use the  `IEventProcessor` interface. It has a method called  `ProcessEventAsync`. 
+* The class `EventProcessorHost ` can also be used for event processing.
+* Event hub max event size is 1 MB.
 * Notification hub: Push engine to send notifications to different platforms (iOS, Android, Windows).
 * Notification Hubs: Two resource levels --> hubs and namespaces. Hub is a push resource for one app. A namespace is a collection of hubs in one region.
 

@@ -163,6 +163,7 @@
 * There are three pricing tiers for Azure Event Hubs: Basic, Standard, and Dedicated. The tiers differ in terms of supported connections, the number of available Consumer groups, and throughput [from docs site].
 * Namespaces need a unique name. The have the url pattern `namespace.servicebus.windows.net`.
 * EventHub partition count needs to be equal to number of consumers.
+* CLI command for eventhubs: `az eventhubs`.
 * Event Hub connection string format: `Endpoint=sb://<FQDN>/;SharedAccessKeyName=<KeyName>;SharedAccessKey=<KeyValue>`
 * Event Hub send events: Use the `EventHubClient` class. It has the method `SendAsync(EventData event)` where EventData takes a byte array. 
 * Event Hub process events: Use the  `IEventProcessor` interface. It has a method called  `ProcessEventAsync`. 

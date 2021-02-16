@@ -27,7 +27,9 @@
 * Create a ACR: `az acr create`.
 * Generate an image: `az acr build.` When image is build it is pushed to a registry.
 * Container instances are simpler than kubernetes, but do not offerthe same flexibility.
-*
+* A resource group is a logical grouping of resources. They can be controlled together.
+* Resources within a resource group can have different locations.
+* A resource group needs a location, because it stores metadata. This is important when thinking about complience. 
 
 
 
@@ -72,6 +74,7 @@
 * Changefeed notification:
 
 ### Blob Storage
+* Three different type of blobs `Block Blob` (optimized for uploading large amounts of data), `Append Blob` (optimized for appending data e.g. logs) and `Page Blob` (optimized for VHDs.
 * Blob storage offers 3 different access tiers: Hot [frequently accessed], cool [infrequently accessed] and archived [for long term backup].
 * Files can be moved by CLI, AzCopy or by using client library.
 * A file in blob storage has metadata and properties. Metadata is user generated (docType, docClas) and properties are system generated (LastModified, BlobType).

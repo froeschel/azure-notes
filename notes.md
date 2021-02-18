@@ -38,6 +38,7 @@
 * Apps can be executed in different runtimes like .NET, Java, Node.js, PHP, Python or Ruby.
 * Wep Apps are running inside an App Service Plan. An App Service Plan can be scaled up (more computing power) or out (more instances).
 * App Service Plans can scale out. One could use manual scale or custom autoscale. Maual scale: Setting a predined number of instances. Autoscale: Scale based on a metric or scale to a specific instance count at a specific time. Manual scale: Simply set the instance count. 
+* Application logging for win/linux, webserver logging win only. Linux only supports applicattion logging and deployment logging. Logs go to file system og blob storage.
 
 ### Functions
 * During the first call to a function in a consumption plan it can take som time to get a reply. To avoid that use premium plan.
@@ -181,6 +182,10 @@
 * Use `client.SendAsync(new Message(Encoding.UTF8.GetBytes(message)))` to send messages to the Service Bus.
 *  Azure Queue Storage queues, provide cloud messaging between components. This can be helpful when designing systems that have components which need to scale independently. To get messages from queue you can use the following code: 
 * The max size for a message in Azure Queue Storage is 64 KB.
+* Storage queue can handle 2000 messages/second.
+* Max size of a queue is 500 TB.
+* Queues can respond to high demand instantaneously.
+* Access to queues can be authourized by Azure AD, an acoount key or shared access signitures.
 * Azure Service Bus: Used to send messages between system components. These messages are consumed elsewhere in the system.
 * Service Bus has more features than storage queue.
 * Service Bus lives in a namespace.

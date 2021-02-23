@@ -117,6 +117,8 @@
 
 ### Caching
 * Cache expiration policies for FrontDoor, CDNs, or Redis caches store.
+* CDNs can be created by using offers from Microsoft, Verizon or Akamai. Verizon also offers a premium version.
+* The premium version allows to use mobile optimization.
 * One CDN profile has one or more endpoints.
 * When creating a CDN endpoint you add the endpoint url and the origin hostname url. 
 * CDN endpoints can have custom domain.
@@ -124,7 +126,8 @@
 * Azure CDN caching rules: Bypass cache [do not cache], Override [override origin cache], Set if missing [use own if origin missing].
 * Query string caching: Ignore query strings [deault, cache in POP node], Bypass caching for query strings [do not cache query strings at all], Cache every unique URL [every url set as an unique asset].
 * Get information from Redis: var info = `database.Execute("INFO");`.
-* Some Redis commands: `SET` sets a value in a key, `SETEX` sets value and a key and a expiration time, `EXPIRE` sets a key to expire, `EXISTS` check if a key exists in Redis.  
+* Some Redis commands: `SET` sets a value in a key, `SETEX` sets value and a key and a expiration time, `EXPIRE` sets a key to expire, `EXISTS` check if a key exists in Redis.
+* Redis connection string can be found in the portal.  
 
 
 ### Logging

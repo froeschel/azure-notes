@@ -30,6 +30,11 @@
 * A resource group is a logical grouping of resources. They can be controlled together.
 * Resources within a resource group can have different locations.
 * A resource group needs a location, because it stores metadata. This is important when thinking about complience. 
+* Not all resources can be moved from one resource group to another. For reference [here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-support-resources)
+* It is possible to make REST calls that can validate if a move of resources would be successful.
+* During a move it is not possible to write or delete resources.
+* Moving resources between groups does not change their location.
+* 
 
 
 

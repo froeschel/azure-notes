@@ -130,12 +130,18 @@
 * Redis connection string can be found in the portal.  
 
 
+
+
 ### Logging
 * Enable diagnostics logging for App Servive: On the menu 'App Service logs' switch on 'Application Logging' and 'Web server logging'. Select a quota and a retention period.
   Logs can be downloaded from this url: `https://<app-name>.scm.azurewebsites.net/api/dump`
 * View Log Stream: The log stream can be viewed on the menu item 'Log stream'.
 * Logging with Application Insights: When configuring Application Insights in a ASP.NET core app the ILogger sends warnings and above to AI sink. Read more [here](https://docs.microsoft.com/en-us/azure/azure-monitor/app/ilogger).
+* In Azure Monitor one can get can overview of all the system metrics and AppInsights logs that have been collected.
+* It is possible to query the data with the Kusto query language.
+* Transient fault is a temporary error that can occur in your cloud set up (e.g. network connection lost).
 * Use `SqlAzureExecutionStrategy` to handle transient faults. Can by used manually `executionStrategy.Execute(() =>` or be set in the DBConfiguration class.
+* Another idea would be to use queues to decouple the components from eachother.
 
 ## Third Party Services
 

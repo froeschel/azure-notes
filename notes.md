@@ -65,6 +65,9 @@
 * `LRS`: 3 copies in one AZ. `ZRS`: 3 copies one per AZ. `RA-GRS`: 6 copies --> 3 per region + additional Read access for distribution. `GZRS`: 6 copies --> two regions --> primary and secondary read access.
 * Not all replication options are available in every region.
 * `Soft delete` gives the possibility to restore deleted files within a specified retention period.
+* All data written to Azure Storage is automatically encrypted.
+* Always use HTTPS to encrypt data in transit.
+* Storage Analytics service audits the access to the storage account. 
 
 
 ### Cosmos

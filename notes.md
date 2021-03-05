@@ -5,8 +5,12 @@
 ### IAAS
 * VM price can be reduced if you shut it down. You still need to pay for storage.
 * Spot instance: Machine at a reduced price for a limited amoount of time.
-* Disk is stored as VHD (virtual hard disk). Three option: `Premium SSD`, `Standard SSD`, `Standard HDD`.
+* Disk is stored as VHD (virtual hard disk). Three options: `Premium SSD`, `Standard SSD`, `Standard HDD`.
+* Disk performance is expressed with IOPS and throughput (MBps).
+* For `Premium SSD` performance is guaranteed.
 * Disk is encrypted at rest with platform encryption key.
+* Three types of disks: OS Disk, Data Disk and Temporary Disk.
+* Most disk for VMs are managed (managed disk stored as PageBlobs in storage account that you don't need to manage).
 * Data disks can be atached and detached to a VM.
 * Vnet for VM needs to be in the same region. 
 * When using RDP to connect remember to open ports in NSG.

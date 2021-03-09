@@ -17,6 +17,7 @@
 * Use gen1 VMs unless you have specific requirements.
 * When creating a VM it needs a name, location, group, vnet, subnet, nsg.
 * 1 VM is made of `Machine`,`Network Interface`, `Data Disk`, `Public IP`, `NSG`, `VNET`, `Data Disk`.
+* A group of identical VMs can be created by using scale sets.
 * VMs of generation 1 support disk encryption. Generation 2 has no support for disk encryption. Fixed disk is required. 
 * Update-AzVM: Updating the state of a VM. E.g. with a an IdentityId [Update-AzVM - IdentityId]. This sets the number of identities.
 * `az vm identity assign` to assign an identity that has been created with `az identity create`
@@ -111,6 +112,7 @@
 * Role assignments can be made in the portal using the IAM blade.
 
 ### Secure Cloud Solutions
+* Pricing Standard and Premium.
 * Azure Key Vault API: Azure Key Vault can manage secrets, keys and certificates. When using C# one can access keys by using the `KeyClient` class.
 * Key Vault is secured by Azure AD. It is possible to assign permissions to a Key Vault. Permission are managed in 'Access policies'.
 * In Functions you can reference the Key Vault by using an environment variable in format `@Microsoft.KeyVault(SecretUri=copied identifier for the secret)`. 

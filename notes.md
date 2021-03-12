@@ -78,9 +78,11 @@
 ### Cosmos
 * Azure Cosmos DB is a fully managed NoSQL database for modern app development. Single-digit millisecond response times, and automatic and instant scalability, guarantee speed at any scale.
 * Pricing can be a bit complicated. Price is calculated per Request Unit (RU). RU is a 'performance currency abstracting the system resources such as CPU, IOPS, and memory'. So database operations can have a variable amount of RUs, depending on how much system resources it takes. You pay for the throughput in RU that you provision. One can have specific pricing per container or share RUs for the whole database.
-* Cosmos DB provides five different database APIs: SQL, Cassandra, Mongo, Gramlin and Table API.
+* Cosmos DB provides five different database APIs: SQL, Cassandra, Mongo, Gremlin and Table API.
 * A cosmos container should have a partition key. With a partition key,documents will be grouped into logical partitions. It is important to set a partition key so that all documents are evenly distributed. To find the right key canbe tricky when starting a new project.
 * When creating a Cosmos database it can be set to 5 different consistency levels [Strong, Bounded staleness, Session, Consistent prefix, Eventual]. [Strong] A client will never read a uncomitted or partial write, [Bounded staleness] A read might lack behind a write, [Consistent Prefix] reads never see out-of-order writes, [Eventual] a client may read the values that are older than the ones it had read before.
+* Strong consistency is important for apps where is is important that all replicated date is available at the same time and in the same order. An example could be financial transactions.
+* Eventual consistency is the weakest level. It gives low latency and high troughput, but no order is guaranteed. 
 * Stored precedures: Stored procedures are written using JavaScript, they can create, update, read, query, and delete items inside an Azure Cosmos container.
 * Triggers: Pre-trigger are executed before modifying an item. Post-trigger after modifying an item.
 * Trigger and stored procedures must be registered and called through the SDK.

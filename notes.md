@@ -92,6 +92,8 @@
 ### Blob Storage
 * Three different type of blobs `Block Blob` (optimized for uploading large amounts of data), `Append Blob` (optimized for appending data e.g. logs) and `Page Blob` (optimized for VHDs.
 * Blob storage offers 3 different access tiers: Hot [frequently accessed], cool [infrequently accessed] and archived [for long term backup].
+* Access tiers are only available in `General Purpose V2` storage account types.
+* Hot is cheap in access and more expensive in storage, where archived is expensive in access and cheap in storage. 
 * Files can be moved by CLI, AzCopy or by using client library.
 * A file in blob storage has metadata and properties. Metadata is user generated (docType, docClas) and properties are system generated (LastModified, BlobType).
 * One can set metadata on a blob with following command `PUT https://myaccount.blob.core.windows.net/mycontainer/myblob?comp=metadata`.
@@ -101,6 +103,7 @@
 * Blob leasing = prevent override or deletion.
 * Create a read onlu snapshot: `https://myaccount.blob.core.windows.net/mycontainer/myblob?comp=snapshot`. 
 * Get a snapshot of a blob using query string: `https://myaccount.blob.core.windows.net/mycontainer/myblob?snapshot=<DateTime>`.
+* A `Lease` will set a lock on a specific blob.
 
 ## Security
 

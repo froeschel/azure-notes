@@ -55,7 +55,7 @@
 * Functions supported languages: C#, JavaScript, F#, Java, PowerShell, Python, TypeScript.
 * Functions can be run by timer trigger. These are set by using NCRONTAB expressions. They have the format {second} {minute} {hour} {day} {month} {day-of-week}. So if you want to run the function every 3 hours it should look like this: 0 0 */3 * * *
 * Triggers are what causes a function to run e.g. an event in the system. A function can only have one trigger.
-* Bindings: Input --> data that comes in to the functuin. Output --> data that is send. Function can have multiple input and output bindings.
+* Bindings: Input --> data that comes in to the function. Output --> data that is send. Function can have multiple input and output bindings.
 * Durable function for long running operations that need to maintain state. 
 * To work with duarble function the extension in the portal needs to be activated.
 * It is possible to check status of a durable function using `statusQueryGetUri`.
@@ -100,6 +100,7 @@
 * Blob storage is accesible by using Azure Storage REST API, Azure PowerShell, Azure CLI or client libraries in .NET, Java, Node.js, Python, Go, PHP or Ruby.
 * Rules can be set so that blobs automatically can move to another access tier based ona property e.g. LastModified.
 * Blob storage account URL format: `https://{accountName}blob.core.windows.net/{container}/{blobName}`.
+* A storage container can only store blobs. But you can name blobs with a hierarchy structure. You then get 'virtual' folders.
 * Blob leasing = prevent override or deletion.
 * Create a read onlu snapshot: `https://myaccount.blob.core.windows.net/mycontainer/myblob?comp=snapshot`. 
 * Get a snapshot of a blob using query string: `https://myaccount.blob.core.windows.net/mycontainer/myblob?snapshot=<DateTime>`.

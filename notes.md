@@ -220,8 +220,9 @@
 * Access to queues can be authourized by Azure AD, an acoount key or shared access signitures.
 * Azure Service Bus: Used to send messages between system components. These messages are consumed elsewhere in the system.
 * Service Bus has more features than storage queue.
+* Azure Service Bus can exchange messages in three different ways: queues, topics, and relays.
 * Service Bus lives in a namespace.
-* Max message size in service bus 256 KB
+* Max message size in service bus 256 KB. In the premium SKU 1 MB.
 * Basic Plan has only queues. Standard and above has queues and topics.
 * Service Bus has a SLA of 99,9%.
 * A namespace is a container for all messaging components. Multiple queues and topics can be in a single namespace.

@@ -87,7 +87,8 @@
 * Triggers: Pre-trigger are executed before modifying an item. Post-trigger after modifying an item.
 * Trigger and stored procedures must be registered and called through the SDK.
 * Triggers, stored procedures and UDF only works with SQL API.
-* Changefeed notification:
+* Cosmos supports two types of provisioned throughput. Manual and autoscale.
+* When using autoscale you provision a max throughput.
 
 ### Blob Storage
 * Three different type of blobs `Block Blob` (optimized for uploading large amounts of data), `Append Blob` (optimized for appending data e.g. logs) and `Page Blob` (optimized for VHDs.
@@ -134,6 +135,13 @@
 * Cache expiration policies for FrontDoor, CDNs, or Redis caches store.
 * CDNs can be created by using offers from Microsoft, Verizon or Akamai. Verizon also offers a premium version.
 * The premium version allows to use mobile optimization.
+* Different types of optimization (based on provider)
+* `Genaral web delivery` used for genearal web apps. Can also be used ofr video streaming.
+* `Dynamic Site Acceleration` used for dynamic content. 
+*  Microsoft delivers `Dynamic Site Acceleration` via the `Front Door Service`.
+* `General Media Streaming` for live streaming and on demand video.
+* `Video-on-demand media streaming` for on demand streaming.
+* `Large file download` for files larger than 10 MB.
 * One CDN profile has one or more endpoints.
 * When creating a CDN endpoint you add the endpoint url and the origin hostname url. 
 * CDN endpoints can have custom domain.

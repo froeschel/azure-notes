@@ -37,7 +37,13 @@
 * It is possible to make REST calls that can validate if a move of resources would be successful.
 * During a move it is not possible to write or delete resources.
 * Moving resources between groups does not change their location.
-* 
+
+### Networking
+* ExpressRoute is a dedicated and private conection from on prem to Azure data center. 
+* With ExpressRoute one can connecto to Azure by using a Point-to-Point connection.
+* ExpressRoute does provide private connectivity, but it isn't encrypted.
+* To implement ExpressRoute, use an ExpressRoute partner who offers an authenticated connection to Azure.
+* ExpressRoute can be used when data should not access the public internet. 
 
 
 

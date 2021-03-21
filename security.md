@@ -8,6 +8,7 @@
 * Role assignment: attaching a role to a user, group, service principal, or managed identity at a particular scope for the purpose of granting access.
 * There are some build in roles e.g.: Owner, Contributor, Reader, User Access Administrator.
 * Role assignments can be made in the portal using the IAM blade.
+* *
 
 ### Secure Cloud Solutions
 * Pricing Standard and Premium.

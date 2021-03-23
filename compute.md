@@ -30,6 +30,7 @@
 * Create a ACR: `az acr create`.
 * Generate an image: `az acr build.` When image is build it is pushed to a registry.
 * Container instances are simpler than kubernetes, but do not offerthe same flexibility.
+* A container group is a collection of containers that get scheduled on the same host machine.
 * A resource group is a logical grouping of resources. They can be controlled together.
 * Resources within a resource group can have different locations.
 * A resource group needs a location, because it stores metadata. This is important when thinking about complience. 

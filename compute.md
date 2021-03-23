@@ -38,6 +38,10 @@
 * It is possible to make REST calls that can validate if a move of resources would be successful.
 * During a move it is not possible to write or delete resources.
 * Moving resources between groups does not change their location.
+* One can generalize a VM to use it as an image for deployments.
+* This is done by using `sysprep`. This tool removes personal account and security information.
+* After the tool has run, do the following: 1) stop the VM 2) set status of VM to generalized 3) get the VM 4) Create image configuration 5) Create the image.
+* 
 
 ### Networking
 * ExpressRoute is a dedicated and private conection from on prem to Azure data center. 
@@ -64,3 +68,5 @@
 * Durable function for long running operations that need to maintain state. 
 * To work with duarble function the extension in the portal needs to be activated.
 * It is possible to check status of a durable function using `statusQueryGetUri`.
+* Three durable function types: `Client`, `Orchestrator` and `Activity`.
+* Different application patterns: `chaining`, `fan out/in`, `async http api`, `monitor` and `human interaction`.

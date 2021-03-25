@@ -64,8 +64,8 @@
 * When creating a CDN endpoint you add the endpoint url and the origin hostname url. 
 * CDN endpoints can have custom domain.
 * When origin content changes, purge CDN.
-* Azure CDN caching rules: Bypass cache [do not cache], Override [override origin cache], Set if missing [use own if origin missing].
-* Query string caching: Ignore query strings [deault, cache in POP node], Bypass caching for query strings [do not cache query strings at all], Cache every unique URL [every url set as an unique asset].
+* Control caching by using caching rules: Bypass cache [do not cache], Override [override origin cache], Set if missing [use own if origin missing].
+* Control query string caching: Ignore query strings [deault mode. first request asset gets cached. all subsequent requests: asset from cache], Bypass caching for query strings [do not cache query strings at all], Cache every unique URL [every url set as an unique asset].
 * Get information from Redis: var info = `database.Execute("INFO");`.
 * Some Redis commands: `SET` sets a value in a key, `SETEX` sets value and a key and a expiration time, `EXPIRE` sets a key to expire, `EXISTS` check if a key exists in Redis.
 * Redis connection string can be found in the portal.  

@@ -1,6 +1,11 @@
 ## Security
 
 ### Authentication and Authorization
+* Identities can be manged and access can be controlled with Azure AD.
+* Azure AD has different SKUs: Free, Premium P1 and Premium P2.
+* Azure AD can be used to authenticate users for your application.
+* Applications canbe set up to use Azure AD as identity provider.
+* Azure AD supports MFA.
 * OpenID Connect for authentication and OAuth2 for authentication.
 * Shared Access Signatures (SAS) grant limited access to resources. Three types [User, Service and Account].
 * SAS keys can be genereted in PowerShell, CLI or .NET.

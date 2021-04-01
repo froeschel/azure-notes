@@ -6,6 +6,7 @@
 * Azure AD can be used to authenticate users for your application.
 * Applications canbe set up to use Azure AD as identity provider.
 * Azure AD supports MFA.
+* 
 * OpenID Connect for authentication and OAuth2 for authentication.
 * Shared Access Signatures (SAS) grant limited access to resources. Three types [User, Service and Account].
 * SAS keys can be genereted in PowerShell, CLI or .NET.
